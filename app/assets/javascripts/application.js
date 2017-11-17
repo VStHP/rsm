@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 //= require jquery
 //= require rails-ujs
 //= require modernizr-2.7.1-respond-1.4.2.min
@@ -22,3 +21,5 @@
 //= require bootstrap-datepicker
 //= require turbolinks
 //= require format_datepicker
+//= require alertify/lib/alertify.min.js
+//= require profile-ui

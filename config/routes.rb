@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users, skip: [:registrations, :sessions]
   as :user do
     get "/signup", to: "registrations#new", as: :new_user_registration
     post "/signup", to: "registrations#create", as: :user_registration
-    get "/profile", to: "registrations#edit", as: :edit_user_registration
+    get "/setting", to: "registrations#edit", as: :edit_user_registration
     put "/signup", to: "registrations#update", as: nil
     delete "/signup", to: "registrations#destroy", as: nil
     get "/login", to: "sessions#new", as: :new_user_session
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   end
 
   root "static_pages#index"
+  get "/profile", to: "users#show"
+  resources :clubs
 end

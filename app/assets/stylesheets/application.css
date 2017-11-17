@@ -17,4 +17,6 @@
  *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker
+ *= require alertify/themes/alertify
  */
