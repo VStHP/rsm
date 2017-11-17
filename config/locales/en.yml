@@ -32,8 +32,39 @@
 en:
   hello: "Hello world"
   rsm: "Rsm"
-index:
-  fram: "Framgia"
-  recruit: "Recruit"
-  home: "Home"
-  latest: "Latest news"
+  oop: "Oops!"
+  error: "An error has occurred, please try again."
+  shared:
+    error_messages: "The form contains "
+  index:
+    fram: "Framgia"
+    recruit: "Recruit"
+    home: "Home"
+    latest: "Latest news"
+  clubs:
+    create:
+      create_success: "The club had been add into your profile"
+      create_fail: "Sorry, something was wrong! The club can't save"
+    update:
+      update_success: "The club had been update success"
+      update_fail: "Sorry, something was wrong! The club can't save update"
+    destroy:
+      destroy_success: "The club had been delete from profile"
+      destroy_fail: "Sorry, something was wrong! The club can't delete"
+    helpers:
+      present: "Present"
+    _index:
+      club_title: "Clubs"
+      describle: "Describing the clubs that you have participated in as detailed as possible in your employability"
+      add: "Additonal"
+    _club:
+      confirm: "Are you sure you want to delete this club?"
+      pos: "Position: "
+    _form:
+      name: "Club Name (*)"
+      pos: "Position (*)"
+      from: "From"
+      to: "To"
+      require: "(*) Required Information"
+      cancel: "Cancel"
+      save: "Save"

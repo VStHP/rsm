@@ -1,0 +1,78 @@
+<%= form_for @club, :html => {:class => "new-section"}, remote: true do |f| %>
+  <div>
+    <div class="edit-field block">
+      <div class="form-group">
+        <%= f.label :name, t("clubs._form.name") %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="edit-field block">
+      <div class="form-group">
+        <%= f.label :position, t("clubs._form.pos") %>
+        <%= f.text_field :position, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="edit-field block">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <%= f.label :start_time, t("clubs._form.from") %>
+            <%= f.text_field :start_time, "data-provide" => "datepicker",
+              class: "datepick form-control" %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <%= f.label :end_time, t("clubs._form.to") %>
+            <%= f.text_field :end_time, "data-provide" => "datepicker",
+              class: "datepick form-control" %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <div class="m-t-lg hidden-xs"></div>
+            <label class="control-label">
+              <%= f.check_box :current, class: "to-present-checkbox edit-control" %>
+              <%= f.label :current, t("clubs.helpers.present") %>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="edit-field block">
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group push-top-md edit-field block">
+    <div class="row">
+      <div class="col-sm-6"><%= t "clubs._form.require" %></div>
+      <div class="col-sm-6 text-right">
+        <button id="club_cancel" type="button" class="btn-cancel btn btn-default">
+          <%= t "clubs._form.cancel" %>
+        </button>
+        <%= f.submit t("clubs._form.save"), class: "btn-save btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<script type="text/javascript">
+  $('#club_cancel').click(function(){
+    $('#new_club').remove();
+    $('#btn-add-club').show();
+    $('#edit_club_<%= params[:id] %>').remove();
+    $('#info_club_<%= params[:id] %>').show();
+  });
+  $(".datepick").datepicker( {
+    format: "yyyy-mm-dd",
+    startView: "months"
+  });
+</script>

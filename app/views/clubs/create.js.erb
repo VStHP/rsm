@@ -1,0 +1,12 @@
+<% if @club.errors.any? %>
+  alertify.error('<%= escape_javascript(render :partial => "shared/error_messages", :locals => {:object => @club })%>');
+<% else %>
+  <% if flash[:success].present? %>
+    $('#new_club').remove();
+    $('#btn-add-club').show();
+    alertify.success('<%= flash[:success] %>');
+    $('#form-club').append('<%= j render(@club) %>');
+  <% else %>
+    alertify.error('<%= flash[:danger] %>');
+  <% end %>
+<% end %>

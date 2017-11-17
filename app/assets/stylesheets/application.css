@@ -15,4 +15,8 @@
  *= require font-awesome
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker
+ *= require alertify/themes/alertify.default.css
+ *= require alertify/themes/alertify.bootstrap.css
+ *= require alertify/themes/alertify.core.css
  */
