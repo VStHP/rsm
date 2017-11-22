@@ -1,2 +1,12 @@
 male: 1
 female: 0
+selected: "1"
+date_format: "%m/%d/%Y"
+clubs:
+  model:
+    current_fall: "1"
+    name_max_length: 150
+    pos_max_length: 100
+    cont_max_length: 5000
+    cont_min_length: 20
+
