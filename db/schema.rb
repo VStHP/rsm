@@ -71,8 +71,13 @@ ActiveRecord::Schema.define(version: 20171115043638) do
   end
 
   create_table "clubs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.bigint "user_id"
+    t.string "name", null: false
+    t.bigint "user_id", null: false
+    t.string "position", null: false
+    t.date "start_time"
+    t.date "end_time"
+    t.text "content"
+    t.boolean "current", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_clubs_on_name"
@@ -230,7 +235,7 @@ ActiveRecord::Schema.define(version: 20171115043638) do
     t.string "phone"
     t.text "address"
     t.boolean "sex"
-    t.integer "role"
+    t.integer "role", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false

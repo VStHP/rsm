@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :user, path: "devises", controllers: {
+   devise_for :user, path: "devises", controllers: {
     passwords: "devises/passwords",
     registrations: "devises/registrations",
     sessions: "devises/sessions",
@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   end
   root "static_pages#index"
   resources :users
+  resources :achievements
+  resources :clubs
+
 end
 

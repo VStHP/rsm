@@ -14,5 +14,6 @@ RSpec.configure do |config|
     c.syntax = [:should, :expect]
   end
 
+
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end

@@ -22,7 +22,7 @@
 
 /* Include Open Sans font from Google Web Fonts */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic');
-
+@import "color.scss"
 body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #353535;
@@ -854,6 +854,16 @@ fieldset legend {
     font-size: 16px;
     padding: 30px 0 10px;
     border-bottom: 2px solid #eaedf1;
+    padding-left: 25px !important;
+    background: $white !important;
+    color: #666 !important;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 12px 25px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #ddd;
 }
 
 input[type="file"] {
@@ -1875,4 +1885,3 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     /* If you did use a CSS image background, you can put your high resolution image here */
-}
