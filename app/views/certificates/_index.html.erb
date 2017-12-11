@@ -2,7 +2,7 @@
   <div class="box border-info">
     <fieldset>
       <legend class="box-md">
-        <i class="fa fa-fw fa-bank"></i><%= t "certificate.certi" %>
+        <i class="fa fa-fw fa-certificate"></i><span><%= t "certificate.title" %></span>
       </legend>
       <div class="placeholder-certificate box-md <%= define_style_placeholder @certificates %>">
         <% if current_user.is_user? @user %>
@@ -15,10 +15,8 @@
         <%= render partial: "certificates/certificate", collection: @certificates, as: :certificate %>
       </div>
       <% if current_user.is_user? @user %>
-        <%= link_to (t"certificate.add"), new_certificate_path,
-          id: "btn-add-certificate",
-            class: "btn btn-default btn-block no-border add-one-more-section",
-              remote: true %>
+        <%= link_to t("clubs._index.add"), new_certificate_path, id: "btn-add-certificate",
+          class: "btn btn-default btn-block no-border add-one-more-section", remote: true %>
       <% end %>
     </fieldset>
   </div>

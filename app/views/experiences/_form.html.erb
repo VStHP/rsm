@@ -55,7 +55,7 @@
   </div>
   <div class="form-group push-top-md edit-field">
     <div class="row">
-      <div class="col-sm-6"><%= t "experiences._form.require" %></div>
+      <div class="col-sm-6">( <strong class="text-red">*</strong> )<%= t "require_info" %></div>
       <div class="col-sm-6 text-right">
         <button id="<%= define_cancel_experience_id @experience %>" type="button"
           class="btn-cancel btn btn-default" value="<%= @experience.id %>">

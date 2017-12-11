@@ -3,6 +3,13 @@
 @import 'color';
 
 .box-md {
+  padding: 30px;
+  margin-bottom: 0px;
+  span {
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 18px;
+  }
   padding: 32px;
 }
 .placeholder {
@@ -35,11 +42,19 @@
 .content-section {
   position: relative;
   padding: 25px 30px;
+  &:hover {
+    border-left: 0;
+    box-shadow: 0 0 5px $gray-dark-hard-3;
+    z-index: 2;
+  }
 }
 .new-section{
+  border: 1px $gray-light3 solid;
+  border-left: 0;
+  background: $white;
+  box-shadow: 0 0 20px $gray-dark-hard-3;
   position: relative;
-  padding: 25px 30px;
-  padding-bottom: 0;
+  padding: 5px 30px;
   z-index: 2;
 }
 .content-section{
@@ -51,6 +66,11 @@
 }
 .btn.add-one-more-section.no-border {
   border-top: 1px;
+  margin-bottom: 0px;
+  &:hover {
+    color: $gray-dark-hard-4;
+    background-color: $gray-light4;
+  }
 }
 .m-t-lg {
   margin-top: 30px;
@@ -524,4 +544,67 @@
   position: absolute;
   right: 1px;
   top: 0px;
+}
+.site-content {
+  background: $grey-light1;
+}
+
+.body-profile {
+  margin: 15px 100px;
+  label {
+    color: $dark-color;
+    padding: 10px 0px;
+  }
+  .fa-fw {
+    font-size: 20px;
+  }
+}
+
+.border-primary {
+  border-top: 5px solid $purple-dark;
+  border-bottom: 5px solid $purple-dark;
+  margin-bottom: 10px;
+  background: $light-color;
+  position: relative;
+  .btn-group {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-wrapper {
+  background: $white;
+  border: 1px solid transparent;
+  border-left: 0;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+}
+
+#show-user {
+  h2 {
+    color: $purple-dark;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  div {
+    font-size: 14px;
+    margin: 5px 0px;
+  }
+  i {
+    margin-right: 14px;
+  }
+}
+
+.edit-btn {
+  padding: 15px 0px;
+}
+.content-text {
+  font-size: 13px;
 }

@@ -12,31 +12,28 @@
   <% end %>
   <div>
     <div class="view-field">
-      <h4 class="view-control"><%= certificate.name %></h4>
+      <h3 class="view-control"><strong><%= certificate.name %></strong></h3>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "certificate.major" %></strong>
-        <%= certificate.majors %>
+      <div class="view-control"><%= t "certificate.major" %>: <%= certificate.majors %></div>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "certificate.organization" %></strong>
-        <%= certificate.organization %>
+      <div class="view-control"><%= t "certificate.organization" %>: <%= certificate.organization %></div>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "certificate.classification" %></strong>
-        <%= certificate.classification %>
+      <div class="view-control"><%= t "certificate.classification" %>: <%= certificate.classification %></div>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "certificate.received" %></strong>
-        <%= certificate.received_time %>
+      <div class="view-control"><%= t "certificate.received" %>:
+        <%= I18n.l certificate.received_time, format: :long_profile %></div>
     </div>
   </div>
 </div>

@@ -12,30 +12,30 @@
   <% end %>
   <div>
     <div class="view-field">
-      <h4 class="view-control"><%= experience.company %></h4>
+      <h3 class="view-control"><strong><%= experience.company %></strong></h3>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "experiences._experience.project_name" %><%= experience.name %></strong>
+      <div class="view-control"><%= t "experiences._experience.project_name" %><%= experience.name %></div>
     </div>
   </div>
   <div>
     <div class="view-field">
       <p>
         <span class="view-control" data-control="from-date">
-          <%= experience.start_time %>
+          <%= I18n.l experience.start_time, format: :long_profile %>
         </span>
-        :
+        -
         <span class="view-control" data-control="to-date" data-type="manual">
-          <%= experience.end_time %>
+          <%= I18n.l experience.end_time, format: :long_profile %>
         </span>
       </p>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <div class="view-control"><%= experience.project_detail %></div>
+      <div class="view-control content-text"><%= experience.project_detail %></div>
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <div class="box border-info">
     <fieldset>
       <legend class="box-md">
-        <i class="fa fa-fw fa-bank"></i><%= t "experiences._index.experience_title" %>
+        <i class="fa fa-fw fa-star-o "></i><span><%= t "experiences._index.experience_title" %></span>
       </legend>
       <div class="placeholder-experience box-md <%= define_style_placeholder @experiences %>">
         <% if current_user.is_user? @user %>

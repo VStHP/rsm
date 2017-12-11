@@ -1,14 +1,16 @@
 <%= javascript_include_tag "format_datepicker", "data-turbolinks-track": "reload" %>
 <%= form_for @club, html: {class: "new-section"}, remote: true do |f| %>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <div class="form-group">
         <label><strong class="text-red">*</strong><%= t "clubs._form.name" %></label>
         <%= f.text_field :name, autofocus: true, class: "form-control edit-control" %>
         <span class="club-name-invalid error-message"></span>
       </div>
     </div>
-    <div class="col-sm-6">
+    </div>
+  <div class="row">
+    <div class="col-sm-12">
       <div class="form-group">
         <label><strong class="text-red">*</strong><%= t "clubs._form.pos" %></label>
         <%= f.text_field :position, class: "form-control edit-control" %>

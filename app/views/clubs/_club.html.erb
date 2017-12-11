@@ -12,21 +12,21 @@
   <% end %>
   <div>
     <div class="view-field">
-      <h4 class="view-control"><%= club.name %></h4>
+      <h3 class="view-control"><strong><%= club.name %></strong></h3>
     </div>
   </div>
   <div>
     <div class="view-field">
-      <strong class="view-control"><%= t "clubs._club.pos" %><%= club.position %></strong>
+      <div class="view-control"><%= t "clubs._club.pos" %><%= club.position %></div>
     </div>
   </div>
   <div>
     <div class="view-field">
       <p>
         <span class="view-control" data-control="from-date">
-          <%= club.start_time %>
+          <%= I18n.l club.start_time, format: :long_profile %>
         </span>
-        :
+        -
         <span class="view-control" data-control="to-date" data-type="manual">
           <%= show_endtime club %>
         </span>
@@ -35,7 +35,7 @@
   </div>
   <div>
     <div class="view-field">
-      <div class="view-control"><%= club.content %></div>
+      <div class="view-control content-text"><%= club.content %></div>
     </div>
   </div>
 </div>

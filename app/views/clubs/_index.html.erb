@@ -2,7 +2,7 @@
   <div class="box border-info">
     <fieldset>
       <legend class="box-md">
-        <i class="fa fa-fw fa-bank"></i><%= t "clubs._index.club_title" %>
+        <i class="fa fa-fw fa-heart-o"></i><span><%= t "clubs._index.club_title" %></span>
       </legend>
       <div class="placeholder-club box-md <%= define_style_placeholder @clubs %>">
         <% if current_user.is_user? @user %>
@@ -14,7 +14,7 @@
       <div id="form-club">
         <%= render partial: "clubs/club", collection: @clubs, as: :club %>
       </div>
-      <% if  current_user.is_user? @user %>
+      <% if current_user.is_user? @user %>
         <%= link_to t("clubs._index.add"), new_club_path, id: "btn-add-club",
           class: "btn btn-default btn-block no-border add-one-more-section", remote: true %>
       <% end %>

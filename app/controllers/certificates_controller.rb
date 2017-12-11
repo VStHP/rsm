@@ -25,9 +25,9 @@ class CertificatesController < ApplicationController
   def destroy
     respond_to do |format|
       if @certificate.destroy
-        format.js{@message_success = t "certificate.success"}
+        format.js{@message_success = t "certificate.destroy_success"}
       else
-        format.js{@message_failed = t "certificate.fail"}
+        format.js{@message_failed = t "certificate.destroy_fail"}
       end
     end
   end

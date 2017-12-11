@@ -9,6 +9,9 @@ date:
 achievement:
   cancel_edit: "cancel_achievement_edit"
   cancel_new: "cancel_achievement_new"
+  name_max_length: 255
+  major_max_length: 255
+  organization_max_length: 255
 certificate:
   maximum: 255
 certificate_cancel:

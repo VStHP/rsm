@@ -74,11 +74,13 @@ en:
     not_found_certificate: "Couldn't find Certificate"
     not_found_club: "Couldn't find Club"
     not_found_experience: "Couldn't find Experiences"
+  require_info: " Required Information"
   date:
     formats:
       default: "%Y-%m-%d"
       short: "%b %d"
       long: "%d %m %Y"
+      long_profile: "%d/%m/%Y"
   time:
     formats:
       long: "%d/%m/%Y"
@@ -185,6 +187,7 @@ en:
       unlock: "Unlock my account"
       resend_unlock: "Resend unlock instructions"
   users:
+    birthday_nil: "Birthday not required"
     new:
       title: "Register"
       login: "Login"
@@ -211,6 +214,7 @@ en:
       close: "Close"
       no_jobs: "There is no jobs available at this time"
   achievements:
+    title: "Achievements"
     create: "Create successful"
     majors: "Majors: "
     organization: "Organization: "
@@ -219,17 +223,17 @@ en:
     majors: "Majors"
     organization: "Organization"
     received_time: "Received_time"
-    required: " Required Information"
     example: "Example: Information Technology"
     save: "Save"
     cancel: "Cancel"
     notfound: "Achievements does not exit"
     update_success: "Update successful"
     can_not_update: "Can not update"
-    destroy_success: "Destroy successful"
-    destroy_fail: "destroy fail"
+    destroy_success: "The achievement had been delete from profile"
+    destroy_fail: "Sorry, something was wrong! The achievement can't delete"
     confirm: "Are you sure?"
     describle: "Describing the achievements that you have achieved as detailed as possible in your employability"
+    received_time: "Received time"
   shared:
     error: " Error"
     error_messages: "You have error"
@@ -239,7 +243,7 @@ en:
     organization: "Organization"
     classification: "Classification"
     reveived: "Received_time"
-    certi: "Certificates"
+    title: "Certificates"
     add: "Add"
     save: "Save"
     cancel: "Cancel"
@@ -251,6 +255,8 @@ en:
     plcorganization: "123 Liverpool, United Kingdom"
     plcclass: "Good"
     describle: "Describing the certificates that you have been received as detailed as possible in your employability"
+    destroy_success: "The certificate had been delete from profile"
+    destroy_fail: "Sorry, something was wrong! The certificate can't delete"
   clubs:
     another:
       club_notfound: "Oop! This club isn't exists"
@@ -274,11 +280,10 @@ en:
       pos: "Position: "
       between: " : "
     _form:
-      name: "Club Name (*)"
-      pos: "Position (*)"
+      name: " Club Name"
+      pos: " Position"
       from: "From"
       to: "To"
-      require: "(*) Required Information"
       cancel: "Cancel"
       save: "Save"
     model:
@@ -365,13 +370,13 @@ en:
       company: "Company"
       from: "From"
       to: "To"
-      require: "(*) Required Information"
       cancel: "Cancel"
       save: "Save"
   validates:
     start_time_future: "Start date can not be a future day"
     end_time_future: "End date can not be a future day"
     end_before_start: "End date must be after Start date"
+    receive_time_future: "Received date can not be a future day"
   activerecord:
     errors:
       models:
@@ -409,15 +414,15 @@ en:
           attributes:
             name:
               blank: "Name can not be blank"
-              too_long: "Name must be less than 150 characters"
+              too_long: "Name must be less than 255 characters"
             majors:
               blank: "Majors can not be blank"
-              too_long: "Majors must be less than 150 characters"
+              too_long: "Majors must be less than 255 characters"
             received_time:
               blank: "Received time start can not be blank"
             organization:
               blank: "Organization can not be blank"
-              too_long: "Organization must be less than 150 characters"
+              too_long: "Organization must be less than 255 characters"
         certificate:
           attributes:
             name:
